@@ -45,7 +45,7 @@ var server = http.createServer(function(request, response){
     } else if(path === '/x'){
         response.statusCode = 200
         response.setHeader('Content-Type', 'text/css;charset=utf-8')
-        response.write(`body{color: red;}\n`)
+        response.write(`h1{color: red}\n`)
         response.end()
     } else if (path === '/y'){
         response.statusCode = 200
@@ -56,7 +56,7 @@ var server = http.createServer(function(request, response){
     else {
         response.statusCode = 404
         response.setHeader('Content-Type', 'text/html;charset=utf-8')
-        response.write(`你输入的路径不存在对应的内容\n`)
+        response.write(`你访问的页面不存在\n`)
         response.end()
     }
 
